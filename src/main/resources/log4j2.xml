@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <appenders>
+        <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout pattern="&lt;%d{MM/dd/yyyy HH:mm:ss}&gt; &lt;%p&gt; [%X{requestId}] %m [%c] %n"/>
+        </Console>
+    </appenders>
+
+    <loggers>
+        <root level="${log4j2.level}">
+            <appender-ref ref="stdout"/>
+        </root>
+        <Logger name="org.springframework" level="ERROR" additivity="false">
+            <appender-ref ref="stdout"/>
+        </Logger>
+        <Logger name="org.springframework.web" level="ERROR" additivity="false">
+            <appender-ref ref="stdout"/>
+        </Logger>
+        <Logger name="org.hibernate" level="ERROR" additivity="false">
+            <appender-ref ref="stdout"/>
+        </Logger>
+        <Logger name="org.hibernate.SQL" level="ERROR" additivity="false">
+            <appender-ref ref="stdout"/>
+        </Logger>
+        <Logger name="com.zaxxer.hikari" level="ERROR" additivity="true">
+            <appender-ref ref="stdout"/>
+        </Logger>
+        <Logger name="org.apache" level="ERROR" additivity="true">
+            <appender-ref ref="stdout"/>
+        </Logger>
+    </loggers>
+</configuration>
