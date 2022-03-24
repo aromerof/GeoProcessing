@@ -11,6 +11,7 @@
 
     <link type="text/css" rel="stylesheet" href="<c:url value='/resources/bootstrap/css/bootstrap.min.css'/>">
     <link type="text/css" rel="stylesheet" href="<c:url value='/resources/font-awesome/css/font-awesome.min.css'/>">
+    <link type="text/css" rel="stylesheet" href="<c:url value='/resources/datatables-bs/css/dataTables.bootstrap.min.css'/>">
     <link type="text/css" rel="stylesheet" href="<c:url value='/resources/adminlte/css/AdminLTE.min.css'/>">
     <link type="text/css" rel="stylesheet" href="<c:url value='/resources/adminlte/css/skins/skin-blue.min.css'/>">
     <link type="text/css" rel="stylesheet" href="<c:url value='/resources/fonts/sourcesanspro-font.min.css'/>">
@@ -28,11 +29,9 @@
     <div class="content-wrapper">
         <div class="container">
             <section class="content-header">
-                <h1>Top Navigation</h1>
+                <h1>Projects</h1>
                 <ol class="breadcrumb">
-                    <li><i class="fa fa-dashboard"></i> Home</li>
-                    <li>Layout</li>
-                    <li class="active">Top Navigation</li>
+                    <li><a href="<c:url value='/'/>"><i class="fa fa-home"></i> Home</a></li>
                 </ol>
             </section>
 
@@ -42,7 +41,30 @@
                         <h3 class="box-title">Blank Box</h3>
                     </div>
                     <div class="box-body">
-                        <p>The great content goes here</p>
+                        <table id="projects-table" class="table table-bordered table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Country</th>
+                                <th>State</th>
+                                <th>City</th>
+                                <th>Year</th>
+                                <th>Area</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <c:forEach var="project" items="${projects}">
+                                <tr>
+                                    <td>${project.getCode()}</td>
+                                    <td>${project.getCountry()}</td>
+                                    <td>${project.getState()}</td>
+                                    <td>${project.getCity()}</td>
+                                    <td>${project.getYear()}</td>
+                                    <td>${project.getArea()}</td>
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </section>
@@ -52,6 +74,8 @@
 
 <script type="text/javascript" src="<c:url value='/resources/jquery/js/jquery.min.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/resources/bootstrap/js/bootstrap.min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/resources/datatables/js/jquery.dataTables.min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/resources/datatables-bs/js/dataTables.bootstrap.min.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/resources/adminlte/js/adminlte.min.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/resources/urjc.geoprocessing/init.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/resources/urjc.geoprocessing/index.js'/>"></script>
