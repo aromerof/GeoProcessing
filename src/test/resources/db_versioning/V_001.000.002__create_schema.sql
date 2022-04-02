@@ -37,6 +37,8 @@ ALTER SEQUENCE project_id_project_seq OWNED BY project.id_project;
 
 ALTER TABLE ONLY project ALTER COLUMN id_project SET DEFAULT nextval('project_id_project_seq'::regclass);
 
+CREATE TRIGGER calculate_project_area BEFORE INSERT ON project FOR EACH ROW EXECUTE PROCEDURE trigger_calculate_project_area();
+
 
 CREATE TABLE flight (
     id_flight integer NOT NULL,
