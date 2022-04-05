@@ -52,6 +52,7 @@
                                 <th>City</th>
                                 <th>Year</th>
                                 <th>Area</th>
+                                <th class="no-sort text-center">Actions</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -63,6 +64,12 @@
                                     <td>${project.getCity()}</td>
                                     <td>${project.getYear()}</td>
                                     <td>${project.getArea()}</td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-xs btn-danger" data-title="tooltip" title="Delete project" onclick="urjc.geoprocessing.index.deleteProject(${project.getIdProject()});">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                             </c:forEach>
                             </tbody>

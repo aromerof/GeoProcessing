@@ -9,6 +9,8 @@ $(function() {
 urjc.geoprocessing.index.init = function() {
     urjc.geoprocessing.index.initDataTable();
 
+    $("[data-title='tooltip']").tooltip();
+
     $("#create-project-button").click(function() {
         urjc.geoprocessing.utils.loadingButton(this);
         urjc.geoprocessing.index.createProject();
@@ -63,4 +65,10 @@ urjc.geoprocessing.index.createProject = function() {
         aoiWkt: $("#project-aoi-wkt").val(),
         comment: $("#project-comment").val()
     }));
+};
+
+urjc.geoprocessing.index.deleteProject = function(idProject) {
+    urjc.geoprocessing.utils.confirmModal("Are you sure you want to <b>DELETE</b> this project?", function() {
+        window.location.href = webroot + "/delete-project/" + idProject;
+    });
 };
