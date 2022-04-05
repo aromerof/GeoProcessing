@@ -2,4 +2,5 @@
 
 <tiles-definitions>
     <definition name="index" template="/WEB-INF/tiles/index.jsp"/>
+    <definition name="project" template="/WEB-INF/tiles/project.jsp"/>
 </tiles-definitions>
