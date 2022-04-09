@@ -66,6 +66,10 @@
                                     <td>${project.getArea()}</td>
 
                                     <td>
+                                        <a href="<c:url value='/project/${project.getIdProject()}'/>" class="btn btn-xs btn-primary" data-title="tooltip" title="Show details">
+                                            &nbsp;<i class="fa fa-info"></i>&nbsp;
+                                        </a>
+
                                         <button type="button" class="btn btn-xs btn-danger" data-title="tooltip" title="Delete project" onclick="urjc.geoprocessing.index.deleteProject(${project.getIdProject()});">
                                             <i class="fa fa-trash"></i>
                                         </button>

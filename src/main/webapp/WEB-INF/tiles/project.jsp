@@ -28,17 +28,22 @@
     <div class="content-wrapper">
         <div class="container">
             <section class="content-header">
-                <h1>Projects</h1>
+                <h1>${project.getCode()}</h1>
                 <ol class="breadcrumb">
                     <li><a href="<c:url value='/'/>"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="active">Project</li>
                 </ol>
             </section>
 
             <section class="content">
                 <div class="box box-default">
-                    <div class="box-header with-border">
-                    </div>
                     <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                            </div>
+                            <div class="col-md-6">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
