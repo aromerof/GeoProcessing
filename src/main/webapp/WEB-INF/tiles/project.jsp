@@ -40,6 +40,46 @@
                     <div class="box-body">
                         <div class="row">
                             <div class="col-md-6">
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label for="project-code">Code</label>
+                                        <input type="text" class="form-control" id="project-code" value="${project.getCode()}" disabled>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="project-year">Year</label>
+                                        <input type="text" class="form-control" id="project-year" value="${project.getYear()}" disabled>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="project-area">Area</label>
+                                        <input type="text" class="form-control" id="project-area" value="${project.getArea()}" disabled>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-4">
+                                        <label for="project-country">Country</label>
+                                        <input type="text" class="form-control" id="project-country" value="${project.getCountry()}" disabled>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="project-state">State</label>
+                                        <input type="text" class="form-control" id="project-state" value="${project.getState()}" disabled>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="project-city">City</label>
+                                        <input type="text" class="form-control" id="project-city" value="${project.getCity()}" disabled>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <label for="project-aoi-wkt">AOI WKT</label>
+                                        <textarea class="form-control" rows="3" style="resize: none;" id="project-aoi-wkt" disabled>${project.getAoi().toText()}</textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <label for="project-comment">Comment</label>
+                                        <textarea class="form-control" rows="3" style="resize: none;" id="project-comment" disabled>${project.getComment()}</textarea>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-6">
                             </div>
