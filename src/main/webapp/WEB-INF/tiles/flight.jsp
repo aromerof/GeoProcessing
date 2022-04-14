@@ -29,55 +29,17 @@
     <div class="content-wrapper">
         <div class="container">
             <section class="content-header">
-                <h1>Projects</h1>
+                <h1>${project.getCode()} - Flights</h1>
                 <ol class="breadcrumb">
                     <li><a href="<c:url value='/'/>"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="<c:url value='/project/${project.getIdProject()}'/>">Project</a></li>
+                    <li class="active">Flights</li>
                 </ol>
             </section>
 
             <section class="content">
                 <div class="box box-default">
-                    <div class="box-header with-border">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-project-modal" data-backdrop="static">
-                            <i class="fa fa-plus"></i> Add project
-                        </button>
-                    </div>
                     <div class="box-body">
-                        <table id="projects-table" class="table table-bordered table-striped table-hover">
-                            <thead>
-                            <tr>
-                                <th>Code</th>
-                                <th>Country</th>
-                                <th>State</th>
-                                <th>City</th>
-                                <th>Year</th>
-                                <th>Area</th>
-                                <th class="no-sort text-center">Actions</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach var="project" items="${projects}">
-                                <tr>
-                                    <td>${project.getCode()}</td>
-                                    <td>${project.getCountry()}</td>
-                                    <td>${project.getState()}</td>
-                                    <td>${project.getCity()}</td>
-                                    <td>${project.getYear()}</td>
-                                    <td>${project.getArea()}</td>
-
-                                    <td>
-                                        <a href="<c:url value='/project/${project.getIdProject()}'/>" class="btn btn-xs btn-primary" data-title="tooltip" title="Show details">
-                                            &nbsp;<i class="fa fa-info"></i>&nbsp;
-                                        </a>
-
-                                        <button type="button" class="btn btn-xs btn-danger" data-title="tooltip" title="Delete project" onclick="urjc.geoprocessing.index.deleteProject(${project.getIdProject()});">
-                                            <i class="fa fa-trash"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </section>
