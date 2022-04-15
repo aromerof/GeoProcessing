@@ -40,6 +40,34 @@
             <section class="content">
                 <div class="box box-default">
                     <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <table id="flights-table" class="table table-bordered table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Code</th>
+                                        <th>Flight date</th>
+                                        <th>Images</th>
+                                        <th class="no-sort text-center">Actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach var="flight" items="${flights}">
+                                        <tr>
+                                            <td>${flight.getCode()}</td>
+                                            <td>${flight.getFlightDate()}</td>
+                                            <td>${flight.getNumImages()}</td>
+
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </c:forEach>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

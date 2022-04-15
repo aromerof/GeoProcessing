@@ -80,6 +80,13 @@
                                         <textarea class="form-control" rows="3" style="resize: none;" id="project-comment" disabled>${project.getComment()}</textarea>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <a href="<c:url value=''/>" class="btn btn-primary">
+                                            <i class="fa fa-plane"></i> View flights
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-6">
                             </div>
