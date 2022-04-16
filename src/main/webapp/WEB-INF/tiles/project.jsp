@@ -82,7 +82,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <a href="<c:url value=''/>" class="btn btn-primary">
+                                        <a href="<c:url value='/flight/${project.getIdProject()}'/>" class="btn btn-primary">
                                             <i class="fa fa-plane"></i> View flights
                                         </a>
                                     </div>

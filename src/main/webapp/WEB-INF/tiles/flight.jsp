@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!DOCTYPE html>
 <html>
@@ -55,7 +56,7 @@
                                     <c:forEach var="flight" items="${flights}">
                                         <tr>
                                             <td>${flight.getCode()}</td>
-                                            <td>${flight.getFlightDate()}</td>
+                                            <td><fmt:formatDate value="${flight.getFlightDate()}" pattern="yyyy-MM-dd"/></td>
                                             <td>${flight.getNumImages()}</td>
 
                                             <td>
