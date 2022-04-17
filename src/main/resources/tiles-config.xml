@@ -4,4 +4,5 @@
     <definition name="index" template="/WEB-INF/tiles/index.jsp"/>
     <definition name="project" template="/WEB-INF/tiles/project.jsp"/>
     <definition name="flight" template="/WEB-INF/tiles/flight.jsp"/>
+    <definition name="run" template="/WEB-INF/tiles/run.jsp"/>
 </tiles-definitions>
