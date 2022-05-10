@@ -32,7 +32,7 @@
                 <h1>${flight.getCode()} - Runs</h1>
                 <ol class="breadcrumb">
                     <li><a href="<c:url value='/'/>"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="<c:url value='/project/${project.getIdProject()}'/>">Project</a></li>
+                    <li><a href="<c:url value='/project/${flight.getProject().getIdProject()}'/>">Project</a></li>
                     <li><a href="<c:url value='/flight/${flight.getProject().getIdProject()}'/>">Flights</a></li>
                     <li class="active">Runs</li>
                 </ol>

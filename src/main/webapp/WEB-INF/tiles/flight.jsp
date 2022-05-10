@@ -60,6 +60,9 @@
                                             <td>${flight.getNumImages()}</td>
 
                                             <td>
+                                                <a href="<c:url value='/run/${flight.getIdFlight()}'/>" class="btn btn-xs btn-primary" data-title="tooltip" title="View runs">
+                                                    <i class="fa fa-bars fa-rotate-90"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                     </c:forEach>

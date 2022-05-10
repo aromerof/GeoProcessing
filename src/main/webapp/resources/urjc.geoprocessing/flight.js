@@ -8,6 +8,8 @@ $(function() {
 
 urjc.geoprocessing.flight.init = function() {
     urjc.geoprocessing.flight.initDataTable();
+
+    $("[data-title='tooltip']").tooltip();
 };
 
 urjc.geoprocessing.flight.initDataTable = function() {

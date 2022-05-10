@@ -66,7 +66,7 @@
                                     <td>${project.getArea()}</td>
 
                                     <td>
-                                        <a href="<c:url value='/project/${project.getIdProject()}'/>" class="btn btn-xs btn-primary" data-title="tooltip" title="Show details">
+                                        <a href="<c:url value='/project/${project.getIdProject()}'/>" class="btn btn-xs btn-primary" data-title="tooltip" title="View details">
                                             &nbsp;<i class="fa fa-info"></i>&nbsp;
                                         </a>
 
