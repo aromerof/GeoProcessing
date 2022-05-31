@@ -7,9 +7,15 @@ $(function() {
 });
 
 urjc.geoprocessing.flight.init = function() {
+    let idProject = $("#idProject").val();
+
     urjc.geoprocessing.flight.initDataTable();
 
     $("[data-title='tooltip']").tooltip();
+
+    urjc.geoprocessing.map.initMap();
+    urjc.geoprocessing.map.createProjectAoiLayer(idProject, true);
+    urjc.geoprocessing.map.createProjectFlightsLayer(idProject, false);
 };
 
 urjc.geoprocessing.flight.initDataTable = function() {

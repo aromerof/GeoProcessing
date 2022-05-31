@@ -14,9 +14,12 @@
     <link type="text/css" rel="stylesheet" href="<c:url value='/resources/adminlte/css/AdminLTE.min.css'/>">
     <link type="text/css" rel="stylesheet" href="<c:url value='/resources/adminlte/css/skins/skin-blue.min.css'/>">
     <link type="text/css" rel="stylesheet" href="<c:url value='/resources/fonts/sourcesanspro-font.min.css'/>">
+    <link type="text/css" rel="stylesheet" href="<c:url value='/resources/ol/css/ol.css'/>">
 </head>
 
 <body class="hold-transition skin-blue layout-top-nav">
+<input type="hidden" id="idProject" value="${project.getIdProject()}">
+
 <div class="wrapper">
     <header class="main-header">
         <nav class="navbar navbar-static-top">
@@ -26,7 +29,7 @@
     </header>
 
     <div class="content-wrapper">
-        <div class="container">
+        <div class="container" style="width: 1400px;">
             <section class="content-header">
                 <h1>${project.getCode()}</h1>
                 <ol class="breadcrumb">
@@ -39,7 +42,7 @@
                 <div class="box box-default">
                     <div class="box-body">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <div class="row">
                                     <div class="form-group col-md-4">
                                         <label for="project-code">Code</label>
@@ -88,8 +91,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                            </div>
+                            <div id="map" class="col-md-7" style="height: 450px;"></div>
                         </div>
                     </div>
                 </div>
@@ -101,7 +103,9 @@
 <script type="text/javascript" src="<c:url value='/resources/jquery/js/jquery.min.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/resources/bootstrap/js/bootstrap.min.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/resources/adminlte/js/adminlte.min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/resources/ol/js/ol.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/resources/urjc.geoprocessing/init.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/resources/urjc.geoprocessing/map.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/resources/urjc.geoprocessing/project.js'/>"></script>
 </body>
 </html>

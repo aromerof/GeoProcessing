@@ -7,7 +7,14 @@ $(function() {
 });
 
 urjc.geoprocessing.run.init = function() {
+    let idProject = $("#idProject").val();
+    let idFlight = $("#idFlight").val();
+
     urjc.geoprocessing.run.initDataTable();
+
+    urjc.geoprocessing.map.initMap();
+    urjc.geoprocessing.map.createProjectAoiLayer(idProject, true);
+    urjc.geoprocessing.map.createFlightRunsLayer(idFlight, false);
 };
 
 urjc.geoprocessing.run.initDataTable = function() {

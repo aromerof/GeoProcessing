@@ -7,4 +7,8 @@ $(function() {
 });
 
 urjc.geoprocessing.project.init = function() {
+    let idProject = $("#idProject").val();
+
+    urjc.geoprocessing.map.initMap();
+    urjc.geoprocessing.map.createProjectAoiLayer(idProject, true);
 };
