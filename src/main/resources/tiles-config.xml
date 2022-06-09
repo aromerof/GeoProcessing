@@ -5,4 +5,5 @@
     <definition name="project" template="/WEB-INF/tiles/project.jsp"/>
     <definition name="flight" template="/WEB-INF/tiles/flight.jsp"/>
     <definition name="run" template="/WEB-INF/tiles/run.jsp"/>
+    <definition name="image" template="/WEB-INF/tiles/image.jsp"/>
 </tiles-definitions>
